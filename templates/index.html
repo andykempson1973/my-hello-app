@@ -6,8 +6,24 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Hello, {{ name }}!</h1>
-    <p>Welcome back to the world of web development.</p>
-    <p>Try visiting <a href="/hello/yourname">/hello/yourname</a> in the address bar!</p>
+<h1 class="guest-header">Simple Guestbook</h1>
+
+<form method="POST" action="{{ url_for('home') }}" class="guest-form">
+    <label for="name_input">Enter your name:</label>
+    <input type="text" id="name_input" name="name_input" required>
+    <button type="submit">Sign Guestbook</button>
+</form>
+
+<div class="guest-list-container">
+    <h2>Signed Guests:</h2>
+    <ul>
+        {% for guest in guests %}
+        <li>{{ guest.name }}</li>
+        {% endfor %}
+        {% if not guests %}
+        <li>Be the first to sign!</li>
+        {% endif %}
+    </ul>
+</div>
 </body>
 </html>

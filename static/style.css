@@ -1,0 +1,22 @@
+body {
+    background-color: #282c34; /* Dark gray/blue background */
+    color: #ffffff;            /* White text */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;         /* Take up full viewport height */
+    margin: 0;
+}
+
+h1 {
+    color: #61dafb; /* Light blue/cyan header color */
+    font-size: 3em;
+    border-bottom: 2px solid #61dafb;
+    padding-bottom: 10px;
+}
+
+a {
+    color: #a0a0a0; /* Gray link color */
+}

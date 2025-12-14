@@ -1,1 +1,7 @@
+# Ignore Python environment files
 venv/
+__pycache__/
+
+# New additions for Flask-SQLAlchemy
+site.db
+instance/

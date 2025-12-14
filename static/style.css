@@ -20,3 +20,41 @@ h1 {
 a {
     color: #a0a0a0; /* Gray link color */
 }
+
+/* --- Default (Desktop/Large Screen) Styles Above --- */
+/* (Keep all your existing styles here) */
+
+/* ---------------------------------------------------- */
+/* --- Mobile/Small Screen Styles Below (Media Query) --- */
+/* ---------------------------------------------------- */
+
+@media (max-width: 600px) {
+    
+    /* 1. Make the main body content a little narrower */
+    body {
+        padding: 10px; /* Reduce padding on small screens */
+    }
+
+    /* 2. Make all form elements take up the full width */
+    .guest-form {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: stretch;
+    }
+    
+    /* 3. Ensure input fields and buttons fill the space */
+    .guest-form input[type="text"], 
+    .guest-form button {
+        width: 100%; /* Force them to use the full width */
+        margin-bottom: 10px; /* Add space between stacked elements */
+    }
+
+    /* 4. Increase font size slightly for better readability on small screens */
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    
+    /* 5. Ensure the list of guests is easy to read */
+    .guest-list-container {
+        padding: 0;
+    }
+}
